@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@400;500;600&family=Muli&display=swap');
+
+:root {
+  --line-border-fill: red;
+  --line-border-empty: #e0e0e0;
+  --body-bg-color: #ededed;
+  --body-text-color: #7e8289;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--body-bg-color);
+  font-family: 'Muli', sans-serif;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  letter-spacing: 3px;
+  color: var(--body-text-color);
+}
+
+.container {
+  text-align: center;
+}
+
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 2rem;
+  max-width: 100%;
+  width: 20rem;
+}
+
+.progress-container::before {
+  content: '';
+  background-color: var(--line-border-empty);
+  position: absolute;
+  top: 50%;
+  height: 4px;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  /* transition: 0.4s ease; */
+  z-index: -1;
+}
+
+.progress {
+  background-color: var(--line-border-fill);
+  position: absolute;
+  top: 50%;
+  height: 4px;
+  left: 0;
+  width: 0%;
+  transform: translateY(-50%);
+  transition: 0.4s ease;
+  z-index: -1;
+}
+
+.circle {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  align-items: center;
+  background-color: white;
+  color: 7e8289;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--line-border-empty);
+  transition: 0.4s ease;
+}
+
+.circle.active {
+  border-color: red;
+}
+
+.btn {
+  background-color: var(--line-border-fill);
+  color: white;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  border: 3px solid var(--line-border-empty);
+}
+
+.btn:hover {
+  background-color: var(--line-border-fill);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn:disabled {
+  background-color: var(--line-border-empty);
+  cursor: not-allowed;
+  color: var(--body-text-color);
+}
