@@ -32,10 +32,6 @@ body {
   transition: width 0.3s ease;
 }
 
-.input {
-  /*  */
-}
-
 .btn {
   background-color: #fff;
   border: 0;
@@ -60,5 +56,3 @@ body {
 .search.active .btn {
   transform: translateX(198px);
 }
-
-
