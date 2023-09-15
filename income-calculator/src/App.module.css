@@ -1,0 +1,24 @@
+.inputGroup {
+  /* background-color: yellow; */
+  margin-bottom: 1rem;
+}
+
+.inputGroup input {
+  display: block;
+  margin-inline: auto;
+  margin-top: 1rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+  background-color: var(--clr-primary-200);
+  width: 100%;
+}
+
+.inputGroup input:focus {
+  outline: none;
+  background-color: var(--clr-primary-100);
+}
+
+.button {
+  padding: 1rem;
+  font-size: 1.5rem;
+}

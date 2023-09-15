@@ -1,0 +1,24 @@
+:root {
+  --clr-primary-100: #fff;
+  --clr-primary-200: #e6e6e6;
+  --clr-primary-500: #8b8b8b;
+  --clr-primary-900: #272727;
+
+  --ff-primary: 'Courier New', Courier, monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 1rem;
+  text-align: center;
+  background-color: var(--clr-primary-900);
+  color: var(--clr-primary-100);
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  font-size: 1.25rem;
+}
