@@ -95,7 +95,7 @@ const balls = [
   },
   {
     number: 12,
-    color: colors.blue,
+    color: colors.purple,
     striped: true,
   },
   {
@@ -160,7 +160,7 @@ function askQuestion() {
   formEl.elements[0].focus();
   setBallDisplay(shuffledBalls[currentIndex]);
 
-  displayEl.innerText = `What is the correct number?.`;
+  displayEl.innerText = `What is the correct number?`;
   feedbackEl.innerHTML = `You have ${timeBetweenQuestions / 1000} seconds between questions.<br />${
     shuffledBalls.length - alreadyAnsweredAmount
   } questions remaining`;

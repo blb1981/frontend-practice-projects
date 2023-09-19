@@ -71,9 +71,15 @@ footer a {
   width: min(100%, 50rem);
   margin-inline: auto;
   background: linear-gradient(to bottom, #046d56, #23cf9c) no-repeat;
-  height: 100vh;
+  min-height: 100vh;
   border-left: 2.5rem solid var(--clr-brown-400);
   border-right: 2.5rem solid var(--clr-brown-400);
+}
+
+@media screen and (max-width: 40em) {
+  .container {
+    border: none;
+  }
 }
 
 .hidden {
@@ -81,8 +87,8 @@ footer a {
 }
 
 .ball {
-  width: 200px;
-  height: 200px;
+  width: 15rem;
+  height: 15rem;
   position: relative;
   border-radius: 50%;
   overflow: hidden;
@@ -92,6 +98,13 @@ footer a {
   box-shadow: 2px 14px 17px 10px rgba(0, 0, 0, 0.45);
   -webkit-box-shadow: 2px 14px 17px 10px rgba(0, 0, 0, 0.45);
   -moz-box-shadow: 2px 14px 17px 10px rgba(0, 0, 0, 0.45);
+}
+
+@media screen and (min-height: 300px) {
+  .ball {
+    width: 10rem;
+    height: 10rem;
+  }
 }
 
 .ball__inner {
@@ -150,6 +163,10 @@ form input {
   text-align: center;
 }
 
+form button {
+  color: var(--clr-brown-400);
+}
+
 form input:focus {
   color: var(--clr-cream-400);
   border: none;
@@ -157,7 +174,7 @@ form input:focus {
 }
 
 form input:disabled {
-  background-color: #113b04;
+  background-color: #4d4d4d;
 }
 
 form > * {
@@ -169,4 +186,6 @@ form > * {
   margin-inline: auto;
   font-size: 2rem;
   cursor: pointer;
+  color: var(--clr-brown-400);
+  margin-bottom: 1rem;
 }
